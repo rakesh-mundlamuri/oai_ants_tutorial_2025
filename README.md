@@ -11,14 +11,14 @@ Radio Access Network (RAN) including base station (gNB) and user equipment (nrUE
 -  RAM: 16 GB
   
 You can use your own laptop if it fulfils the above requirments, or you can use a Virtual Machine (VM) in a cloud platform.
-For VM setup, we recomend using the Google Computing Platform (GCP).
+You can also make use of the SLICES-RI platform (details below). 
 In either case, all users must bring a laptop that has access to internet.
 
 ## 1. Environment Setup
 
 Please follow these instrunctions in the order they appear:
 
-1. To setup a VM in the GCP, follow the instructions at [vmsetup/Setup_VM_GCP.md](./vmsetup/Setup_VM_GCP.md)
-2. Install the required software using [utils/Util_Installation.md](./utils/Util_Installation.md) in your VM.
-3. Install the OAI CN by following the instructions at [cn/CN_Installation.md](./cn/CN_Installation.md)
-4. Finally, install the RAN using the instructions at [ran/RAN_Installation.md](./ran/RAN_Installation.md)
+1. To setup a VM in the SLICES-RI, follow the instructions at [vmsetup/Setup_VM_SLICES.md](./vmsetup/Setup_VM_SLICES.md)
+3. Install the required software using [utils/Util_Installation.md](./utils/Util_Installation.md) in your VM.
+4. Install the OAI CN by following the instructions at [cn/CN_Installation.md](./cn/CN_Installation.md)
+5. Finally, install the RAN using the instructions at [ran/RAN_Installation.md](./ran/RAN_Installation.md)
