@@ -43,4 +43,12 @@ sudo apt install -y iperf3
 # 4. Tutorial Repository
 ```bash
 git clone https://github.com/RajeevGa/ieee_ants2024_oai_tutorial.git
+git checkout develop
 ```
+
+# 5. Openairinterface repository
+Open an another terminal and clone the Openairinterface repository
+```bash
+git clone https://gitlab.eurecom.fr/oai/openairinterface5g.git
+```
+
