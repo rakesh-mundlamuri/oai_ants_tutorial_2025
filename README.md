@@ -1,6 +1,6 @@
-# TUT2: Innovation and Prototyping in O-RAN using Open-Source Testbeds
+# OpenAirInterface Tutorial for Restart Tech Camp 2025!
 
-Welcome to our IEEE ANTS 2024 tutorial! On this page, you will find all the information needed to participate in the OpenAirInterface (OAI) hands-on session.
+On this page, you will find all the information needed to participate in the OpenAirInterface (OAI) hands-on session.
 You should carefully follow the instructions below and set up the environment prior to the hands-on session.
 
 ## 1. Minimum Computing Requirements
