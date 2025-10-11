@@ -2,7 +2,7 @@
 
 
 ```bash
-cd ieee_ants2024_oai_tutorial/cn
+cd ~/openairinterface5g/doc/tutorial_resources/oai-cn5g/
 ```
 
 If you do not have a docker account, create a docker account in [docker signup](https://www.docker.com/) 
