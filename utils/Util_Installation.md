@@ -15,17 +15,14 @@ Otherwise, you will have to run in sudo mode.
 ```bash
 sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt update
-sudo apt install -y git net-tools wireshark
+sudo apt install -y net-tools wireshark tshark
 ```
 
 # 3. Docker
 
 ```bash
-sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
 sudo apt update
-sudo apt install -y docker docker-ce
+sudo apt install -y docker.io docker-compose
 ```
 
 :exclamation: Add your username to the docker group, otherwise you will have to run in sudo mode. 
@@ -42,7 +39,7 @@ sudo apt install -y iperf3
 ```
 # 4. Tutorial Repository
 ```bash
-git clone https://github.com/RajeevGa/ieee_ants2024_oai_tutorial.git
+git clone https://github.com/kaltenbe/oai_tuto_restart_2025.git
 git checkout develop
 ```
 
