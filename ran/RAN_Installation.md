@@ -1,14 +1,21 @@
 # Procedure to install and run OAI basestation (gNB) and the user equipment (nrUE)
 
-compile the gNB and nrUE
+## compile the gNB and nrUE
 
 ```bash
 cd openairinterface5g/
-source oaienv
 cd cmake_targets/
-./build_oai -I  
+./build_oai -I  #only needs to be called first time 
 ./build_oai -w SIMU --gNB --nrUE --ninja
 ```
+
+If you are using a USRP instead of using rfsim
+```bash
+./build_oai -I  -w USRP #only needs to be called first time 
+./build_oai -w USRP --gNB --nrUE --ninja
+```
+
+## Run the gNB and UE
 
 Run the gNB
 
@@ -17,13 +24,16 @@ cd ~/openairinterface5g/cmake_targets/ran_build/build
 sudo -E ./nr-softmodem -O ~/oai_tuto_restart_2025/ran/conf/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --rfsim 
 ```
 
-
 Run the UE from a second terminal:
 
 ```bash
 cd ~/openairinterface5g/cmake_targets/ran_build/build
 sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim --ssb 516 -O ~/oai_tuto_restart_2025/ran/conf/nrue.conf
 ```
+
+If you are using USRP you should remove the paramter --rfsim. 
+
+## Check the output
 
 Verify that it is connected: you should see the following output at gNB:
 
