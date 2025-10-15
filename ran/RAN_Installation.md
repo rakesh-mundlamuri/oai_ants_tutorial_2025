@@ -31,7 +31,7 @@ cd ~/openairinterface5g/cmake_targets/ran_build/build
 sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim --ssb 516 -O ~/oai_tuto_restart_2025/ran/conf/nrue.conf
 ```
 
-If you are using USRP you should remove the paramter --rfsim. 
+If you are using USRP you should remove the paramter --rfsim and add the parameter -E. The latter turns on the 3/4 sampling which is necessary for the B210. 
 
 ## Check the output
 
