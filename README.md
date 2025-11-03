@@ -1,4 +1,4 @@
-# OpenAirInterface Tutorial for Restart Tech Camp 2025!
+# OpenAirInterface Tutorial for IEEE ANTS 2025!
 
 On this page, you will find all the information needed to participate in the OpenAirInterface (OAI) hands-on session.
 You should carefully follow the instructions below and set up the environment prior to the hands-on session.
