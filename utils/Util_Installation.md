@@ -39,7 +39,7 @@ sudo apt install -y iperf3
 
 # 4. Tutorial Repository
 ```bash
-git clone https://github.com/kaltenbe/oai_tuto_restart_2025.git
+git clone https://github.com/rakesh-mundlamuri/oai_ants_tutorial_2025.git
 ```
 
 # 5. Openairinterface repository

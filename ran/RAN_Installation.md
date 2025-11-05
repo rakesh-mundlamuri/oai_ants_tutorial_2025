@@ -21,14 +21,14 @@ Run the gNB
 
 ```bash
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-sudo -E ./nr-softmodem -O ~/oai_tuto_restart_2025/ran/conf/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --rfsim 
+sudo -E ./nr-softmodem -O ~/oai_ants_tutorial_2025/ran/conf/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --rfsim 
 ```
 
 Run the UE from a second terminal:
 
 ```bash
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim --ssb 516 -O ~/oai_tuto_restart_2025/ran/conf/nrue.conf
+sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim --ssb 516 -O ~/oai_ants_tutorial_2025/ran/conf/nrue.conf
 ```
 
 If you are using USRP you should remove the paramter --rfsim and add the parameter -E. The latter turns on the 3/4 sampling which is necessary for the B210. 
@@ -182,12 +182,12 @@ initialULBWPlocationAndBandwidth                            = 13750;
 
 To run gNB
 ```
-sudo -E ./nr-softmodem -O ~/oai_tuto_restart_2025/ran/conf/gnb.sa.band78.fr1.51PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --rfsim 
+sudo -E ./nr-softmodem -O ~/oai_ants_tutorial_2025/ran/conf/gnb.sa.band78.fr1.51PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --rfsim 
 ```
 
 To run UE
 ```
-sudo -E ./nr-uesoftmodem -r 51 --numerology 1 --band 78 -C 3609300000 --rfsim --ssb 228 -O ~/oai_tuto_restart_2025/ran/conf/ue.conf
+sudo -E ./nr-uesoftmodem -r 51 --numerology 1 --band 78 -C 3609300000 --rfsim --ssb 228 -O ~/oai_ants_tutorial_2025/ran/conf/ue.conf
 ```
 
 Resources for calculating [SSB GSCN](https://5g-tools.com/5g-nr-gscn-calculator/) and resources for calculating [RIV](https://www.sqimway.com/rb_calc.php)
@@ -199,18 +199,18 @@ Resources for calculating [SSB GSCN](https://5g-tools.com/5g-nr-gscn-calculator/
 To start CU:
 ```
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-sudo -E ./nr-softmodem -O ~/oai_tuto_restart_2025/ran/conf/gnb-cu.sa.f1.conf
+sudo -E ./nr-softmodem -O ~/oai_ants_tutorial_2025/ran/conf/gnb-cu.sa.f1.conf
 ```
 
 To start DU:
 ```
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-sudo -E ./nr-softmodem --rfsim -O ~/oai_tuto_restart_2025/ran/conf/gnb-du.sa.band78.106prb.rfsim.conf
+sudo -E ./nr-softmodem --rfsim -O ~/oai_ants_tutorial_2025/ran/conf/gnb-du.sa.band78.106prb.rfsim.conf
 ```
 Run the UE:
 ```
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim --ssb 516 -O ~/oai_tuto_restart_2025/ran/conf/ue.conf
+sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim --ssb 516 -O ~/oai_ants_tutorial_2025/ran/conf/ue.conf
 ```
 
 ---
@@ -220,26 +220,26 @@ sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim -
 To start gNB:
 ```
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-sudo -E ./nr-softmodem --rfsim -O ~/oai_tuto_restart_2025/ran/conf/gnb.sa.band78.106prb.rfsim.conf
+sudo -E ./nr-softmodem --rfsim -O ~/oai_ants_tutorial_2025/ran/conf/gnb.sa.band78.106prb.rfsim.conf
 ```
 
 Make sure the script file multi-ue.sh is executable, if not modify its permissions:
 ```
-chmod +x ~/oai_tuto_restart_2025/ran/multi-ue.sh
+chmod +x ~/oai_ants_tutorial_2025/ran/multi-ue.sh
 ```
 
 To start UE1:
 ```
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-sudo ~/oai_tuto_restart_2025/ran/multi-ue.sh -c1 -e
-sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim -O ~/oai_tuto_restart_2025/ran/conf/ue1.conf --rfsimulator.serveraddr 10.201.1.100 # verify serveraddr
+sudo ~/oai_ants_tutorial_2025/ran/multi-ue.sh -c1 -e
+sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim -O ~/oai_ants_tutorial_2025/ran/conf/ue1.conf --rfsimulator.serveraddr 10.201.1.100 # verify serveraddr
 ```
 
 To start UE2:
 ```
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-sudo ~/oai_tuto_restart_2025/ran/multi-ue.sh -c2 -e
-sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim -O ~/oai_tuto_restart_2025/ran/conf/ue2.conf --rfsimulator.serveraddr 10.202.1.100 # verify serveraddr
+sudo ~/oai_ants_tutorial_2025/ran/multi-ue.sh -c2 -e
+sudo -E ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim -O ~/oai_ants_tutorial_2025/ran/conf/ue2.conf --rfsimulator.serveraddr 10.202.1.100 # verify serveraddr
 ```
 
 To login to ue1 namespace
@@ -272,5 +272,5 @@ ping -I oaitun_ue1 192.168.70.135                 # from host, "UL", to oai-ext-
 To remove the namespaces
 
 ```
-sudo ~/oai_tuto_restart_2025/ran/multi-ue.sh -d1 -d2
+sudo ~/oai_ants_tutorial_2025/ran/multi-ue.sh -d1 -d2
 ```
